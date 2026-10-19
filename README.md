@@ -10,7 +10,7 @@ Baixe o APK no celular, abra o arquivo e siga a instalação do Android.
 
 ## Recursos
 
-- 414 itens de estudo organizados em 39 matérias.
+- 3.963 itens de estudo organizados em 39 matérias.
 - Flashcards com giro, resposta, explicação e referência à apostila.
 - Revisão, quiz, autores, anos e afirmações.
 - Favoritos, histórico, revisão dos erros e backup em arquivo.
