@@ -19,3 +19,14 @@ O APK funciona offline desde a instalação. No navegador, aguarde o primeiro ca
 Código web em public/. Aplicativo Android em ../revisa-android/. Publicação web: firebase deploy --only hosting --project revisa-gabri. APK e código-fonte distribuídos nas releases do GitHub; a chave de assinatura não é publicada.
 
 Validação: importação de PDF real, geração e fontes, login persistente, perfis separados, quiz com acerto e erro, giro de cartões, progresso após recarregar, backup/restauração da biblioteca e layout móvel. APK assinado com esquemas v2/v3.
+
+
+## Revisa 2.1: favoritos, busca e atualização
+
+Favoritos tem aba própria na navegação: cartões de qualquer tipo, perguntas do quiz e páginas inteiras da revisão. É possível treinar ou fazer quiz apenas dos cartões salvos. As páginas salvas mantêm todo o texto extraído da página. Favoritos fazem parte do perfil e do backup.
+
+Buscar consulta os PDFs importados, respostas corretas e páginas da revisão, com filtros por matéria e tipo. Pode pesquisar um enunciado, trecho, nome de autor, instituição ou ano. Mostra a relação encontrada e a fonte, sem gerar respostas que não estejam nos documentos. Funciona offline e não utiliza serviço de IA externo.
+
+O APK verifica novas versões ao abrir, no máximo a cada seis horas, e permite verificar manualmente em Opções. Quando há atualização, baixa o APK do GitHub, confere SHA-256, pacote, versão e assinatura antes de abrir o instalador do Android. O usuário precisa permitir instalações pelo Revisa e confirmar a atualização no sistema. O APK 2.0 não contém o atualizador: instale a versão 2.1 uma vez para habilitá-lo. Atualizações preservam o armazenamento do aplicativo.
+
+Manutenção: publicar nova release do APK no GitHub e atualizar public/update.json com versionCode crescente, versionName, URL versionada do APK e SHA-256 do arquivo. O manifesto de atualização não é incluído nos assets do APK para evitar dependência circular de hash. Nenhum PDF é transmitido na verificação de atualização.
